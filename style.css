@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #4cafef;
+  color: white;
+}
+
+#toggle-theme {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: white;
+  color: #4cafef;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggle-theme:hover {
+  background: #e6f3ff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  background: #333;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+nav ul li {
+  margin: 5px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: #222;
+  color: #ddd;
+}
+
+.dark-mode nav {
+  background: #111;
+}
+
+.dark-mode .card {
+  background: #444;
+}
+
+/* FAQ */
+.faq-answer {
+  display: none;
+  margin-top: 0.5rem;
+  color: #555;
+}
+.faq-question {
+  cursor: pointer;
+  color: #0077cc;
+}
+
+/* Counter */
+#counter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #4cafef;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0077cc;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+#form-success {
+  color: green;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  section {
+    padding: 1.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    justify-content: space-around;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 901px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  form {
+    max-width: 500px;
+  }
+}
